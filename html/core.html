@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="core.css" type="text/css">
+        <link rel="stylesheet" href="./vendor/animations.css" />
+        <link href="./vendor/bootstrap.css" rel="stylesheet">
+        <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+    </head>
+<body>
+    <div id="guide_manager">
+        <div class="d-flex h-100">
+
+            <div class="my-auto ms-auto me-4 pt-3 d-flex flex-column animate__animated animate__fadeIn text-light interface">
+                
+                <div class="d-flex shortcodes mb-3">
+                    <div class="ms-4 me-2 selected" onclick="play()">
+                        <div class="key exit"><small>PLAY NOW</small></div>
+                    </div>
+                    <div class="prev" onclick="play()">
+                        <div class="key previous"><small>CHANGE CHARACTER</small></div>
+                    </div>
+                </div>
+
+                <div class="block_ui position-relative">
+                    <h4 id="title"></h4>
+                    <section class="content_list">
+                        <div class="row pt-1" style="max-width:42vh;" id="categories"></div>
+                        <div class="row pt-1" style="max-width:42vh;" id="contents"></div>
+                    </section>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="./core.js" type="text/javascript"></script>
+    <script> 
+        function play() {
+            let audio = document.getElementById("audio");
+            audio.play();
+        }
+    </script>
+    <audio id="audio" src="./design/click.wav"></audio>
+</body>
+</html>
